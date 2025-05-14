@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="img/jpg"  href="assets/ar.png">
+    <title>About Us - Blue Drop Window Cleaning</title>
+    <style>
+        :root {
+            --primary: #0077b6;
+            --secondary: #48cae4;
+            --light: #f8f9fa;
+            --dark: #212529;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+            padding-top: 60px;
+        }
+        
+        /* Home Button Styles */
+        .home-btn-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        
+        .home-btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .home-btn:hover {
+            background-color: #005f92;
+            transform: translateY(-2px);
+        }
+        
+        .home-btn i {
+            margin-right: 5px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .about-header {
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .about-header h1 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .divider {
+            width: 100px;
+            height: 4px;
+            background-color: var(--secondary);
+            margin: 0 auto 30px;
+            border-radius: 2px;
+        }
+        
+        /* Image and Text Layout */
+        .content-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-bottom: 40px;
+            gap: 30px;
+        }
+        
+        .text-content {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .image-group {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .about-image {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .about-image:hover {
+            transform: scale(1.02);
+        }
+        
+        /* Rest of your existing styles... */
+        .about-section {
+            margin-bottom: 50px;
+        }
+        
+        .about-section h2 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .about-section h3 {
+            font-size: 1.4rem;
+            color: var(--secondary);
+            margin: 25px 0 15px;
+            text-align: center;
+        }
+        
+        .about-section p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            text-align: justify;
+            line-height: 1.8;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-card h4 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        
+        @media (max-width: 1000px) {
+            .content-row {
+                flex-direction: column;
+            }
+            
+            .text-content, .image-group {
+                width: 100%;
+            }
+            
+            .about-image {
+                width: 100%;
+                height: auto;
+                max-width: 400px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .home-btn {
+                padding: 8px 12px;
+                font-size: 0.9rem;
+            }
+            
+            .about-header h1 {
+                font-size: 2rem;
+            }
+            
+            .about-section h2 {
+                font-size: 1.5rem;
+            }
+            
+            .about-section h3 {
+                font-size: 1.2rem;
+            }
+            
+            .about-section p {
+                font-size: 1rem;
+                text-align: left;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+            
+            .image-group {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <!-- Home Button in Top Right Corner -->
+    <div class="home-btn-container">
+        <a href="index.html" class="home-btn">
+            <i class="fas fa-home"></i> Home
+        </a>
+    </div>
+    
+    <div class="container">
+        <header class="about-header">
+            <h1>About Us</h1>
+            <div class="divider"></div>
+        </header>
+        
+        <section class="about-section">
+            <h2>Excellence in Every Detail</h2>
+            <h3>Get to Know Us</h3>
+            
+            <div class="content-row">
+                <div class="text-content">
+                    <p>Blue Drop Window Cleaning is built on a simple mission: show up on time, do the job properly, and leave windows spotless every time.
+                         We use modern water-fed pole systems to safely reach and clean high windows from the ground without the need for ladders.</p>
+                    
+                    <p>Every clean includes the glass, frames, and sills because the details matter. Whether it’s a regular visit or a one-off,
+                    we take pride in our work and make sure every home looks brighter when we leave. No fuss. No shortcuts. Just reliable, quality service you can see.</p>
+                </div>
+                
+                <div class="image-group">
+                    <img src="assets/logo 1.jpg" alt="Professional window cleaning" class="about-image">
+                    <img src="assets/waterfed pole.png" alt="Streak-free window results" class="about-image">
+                </div>
+            </div>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <h4>Advanced Technology</h4>
+                    <p>We use cutting-edge water-fed pole systems to safely clean windows at any height without ladders, ensuring both safety and streak-free results.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h4>Comprehensive Service</h4>
+                    <p>We don't just clean glass - frames, sills, and tracks are always included in our service for a complete clean.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h4>Experienced Care</h4>
+                    <p>Every job is handled with consistency, precision, and pride. 
+                        With a strong focus on punctuality and attention to detail, you get a professional clean done right, every time.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="about-section">
+            <h3>Our Commitment</h3>
+            <p>At Blue Drop Window Cleaning, the goal is simple, make homes look their best with crystal-clear windows. 
+                Every job is done with care, from the first window to the last, with a strong focus on quality and detail.
+                 You’ll see the difference not just in the glass, but in the way your home feels after a proper clean. After the job is done
+                 , we make sure you are happy with our job before leaving and collecting payment. 
+                If you’re not happy, we’ll come back and fix it for free. Still not satisfied? You get your money back, 100% guaranteed.</p>
+        </section>
+    </div>
+</body>
+</html>
